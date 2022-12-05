@@ -1,0 +1,22 @@
+// mainpage.dxy -- The front page (mainpage) of the Doxygen documentation
+
+// This file is part of the SaliencyToolbox - Copyright (C) 2006-2008
+// by Dirk B. Walther and the California Institute of Technology.
+// See the enclosed LICENSE.TXT document for the license agreement. 
+// More information about this project is available at: 
+// http://www.saliencytoolbox.net
+
+/*!
+\mainpage
+
+This is the documentation of the C++ source code for the mex files that
+are part of the SaliencyToolbox for Matlab.
+
+For more information see one of these links:
+\li <a href="../index.html">Introduction</a> to the SaliencyToolbox
+\li <a href="../mdoc/index.html">M-file documentation</a>
+\li <a href="../../license.html">License agreement</a>
+\li <a href="http://www.saliencytoolbox.net"> official
+SaliencyToolbox web page</a>
+
+*/

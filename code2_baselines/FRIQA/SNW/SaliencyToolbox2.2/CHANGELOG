@@ -1,0 +1,132 @@
+September 2008
+
+fixed a few problems with the GUI:
+- warning when passing an image name on the guiSaliency command line eliminated
+- "Window close" button on guiSaliency main window now works properly
+- updating of the "Attended Loaction" window when loading a new image now works
+  for all visualization modes
+
+fixed some path and name problems with mex files:
+- added support for 64 bit Windows platforms (mexw64)
+  (Compilation for 64 bit Vista so far only using a modified scheme using Visual Studio)
+- mex files for Windows now have the proper file extensions mexw32 and mexw64
+- for older versions of Matlab dll files are included
+- To avoid annoying warnings in Matlab versions expecting .mexw32 mex files, 
+  the .dll files are automatically renamed into .dll.old on the first call 
+  of initializeGlobal
+- both the mex files and their .m help files are now in SaliencyToolbox/mex
+- the source code for the mex files is in SaliencyToolbox/src
+
+phased out fatal.m and replaced it with error everywhere
+
+fixed minor bug in centerSurround.m
+- center and surround levels were accientally swapped in the csLevels structure
+
+new parameter options in salParams:
+- params.oriComputeMode: one of 'efficient' (default) or 'full'
+  'efficient' only computes orientation filters for the levels that are actually
+              going to be used in the center-surround computation
+              This speeds up computation of the saliency map by about a factor of 2.
+  'full' computes the orientation filters for all levels as before
+- params.exclusionMask: struct of type map or 2d mask of numeric or logical type
+                        regions where exclusionMask is ~= 0 are excluded from the saliency 
+                        computations by setting all feature maps to 0 in these areas. The 
+                        mask is automatically resized to the size of the feature maps.
+- params.IORdecay: sets the decay rate of the inhibitive conductance responsible for 
+                   inihibiiton of return per simulation step of 0.1 ms. This parameter
+                   was so far hidden in initializeWTA.m
+
+batchSaliency.m can now handle directories that contain images and other files. It will
+automatically only load the images.
+
+
+===============================================================================
+
+September 2007
+release of version 2.1
+
+- added batchSaliency for batch processing of multiple images
+
+maxNormalizeIterative, estimateShape, sepConv2PreserveEnergy
+- fixed boundary conditions for 2d convolution to prevent bleeding
+  of energy off the edge. This is a critical update!
+
+displayMap
+- changed normalization such that empty maps appear black instead of gray
+
+
+===============================================================================
+
+July 2007
+release of version 2.0
+
+Replaced license agreement.
+
+guiSaliency, guiLevelParams
+- new GUI version of the code
+
+checkImageSize, runSaliency, guiSaliency
+- check for too large images, prompt user to confirm downsampling
+
+defaultSaliencyParams, defaultLevelParams, centerSurround, winnerToImgCoords
+- made levelParams its own data structure
+
+maxNormalizeLocalMax, defaultSaliencyParams, maxNormalize
+- renamed maxNormalizeStd into maxNormalizeLocalMax
+
+plotSalientLocation, defaultSaliencyParams
+- introduced VisualizationStyle option
+
+all mex files
+- removed all GPL code from these files
+
+Filters.cpp, Filters.h
+- removed functions no longer needed
+
+estimateShape.m
+- make shape estimation more robust by checking that the attended
+  location is actually inside the attended shape (duh!)
+
+
+===============================================================================
+
+
+November 2006
+release of version 1.1
+
+makeFeaturePyramids.m, runSaliency.m, removeColorFeatures.m
+- skipping color-relatated features for grayscale images
+
+normalizeImage.m, maxNormalizeStd.m, 
+maxNormalizeIterative.m, maxNormalize.m
+- added documentation for special range value [0 0]
+
+mexFileLost.m
+- corrected the refernces to the help file for compilation
+
+hueDistance.m
+- added reference to PhD thesis
+
+makeGaborFilter.m, gaborFilterMap.m, defaultGaborParams.m, 
+dataStructures.m, defaultSaliencyParams.m
+- added defaultGaborParams as separate function for gabor parameters
+- added "phases" field to gaborParams
+- adjusted the other functions accordingly
+
+estimateShape.m
+- added and corrected comments
+
+defaultSaliencyParams.m
+- added comment about comparing levels to the iNVT code
+
+contrastModulate.m
+- added this function to create figures such as in the CVIU 2005 article.
+
+makeDyadicPyramid.m 
+- removed defunct filter definition
+
+
+===============================================================================
+
+April 2006
+release of Version 1.0
