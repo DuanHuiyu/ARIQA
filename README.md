@@ -10,4 +10,9 @@ This is the official repo of the paper [Confusing Image Quality Assessment: Towa
 }
 ```
 
-* The constructed CFIQA database and ARIQA database, as well as the proposed CFIQA model and ARIQA model will be available soon.
+## Database
+
+The constructed CFIQA database and ARIQA database can be accessed using the links below.
+
+- Download CFIQA database: [[百度网盘](https://pan.baidu.com/s/1yph5IBz_-qToWrOjKO1hRw?pwd=9sn5)]
+- Download ARIQA database: [[百度网盘](https://pan.baidu.com/s/1W-DIy0-UMjVrtS9_vm46_A?pwd=spus)]
