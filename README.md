@@ -14,10 +14,6 @@ This is the official repo of the paper [Confusing Image Quality Assessment: Towa
 
 The constructed CFIQA database and ARIQA database can be accessed using the links below.
 
-<<<<<<< Updated upstream
-- Download CFIQA database: [[百度网盘](https://pan.baidu.com/s/1oX76hpjo_A1FAD9VBGwgQQ?pwd=6q5a)]
-- Download ARIQA database: [[百度网盘](https://pan.baidu.com/s/1W-DIy0-UMjVrtS9_vm46_A?pwd=spus)]
-=======
 - Download CFIQA database: [[百度网盘](https://pan.baidu.com/s/1yph5IBz_-qToWrOjKO1hRw?pwd=9sn5)] [[TeraBox](https://terabox.com/s/1nrruyl7UVqUYN9qIIXk1TA)]
 - Download ARIQA database: [[百度网盘](https://pan.baidu.com/s/1W-DIy0-UMjVrtS9_vm46_A?pwd=spus)] [[TeraBox](https://terabox.com/s/1eHjFld0VcoqdpbL7zjR3sw)]
 
@@ -39,4 +35,3 @@ The metrics for measuring performance of IQA models can be found in `code4_calcu
 
 ### Contact
 If you have any question, please contact huiyuduan@sjtu.edu.cn
->>>>>>> Stashed changes
