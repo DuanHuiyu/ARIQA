@@ -44,7 +44,7 @@ addpath([Path 'FRIQA\GMSD'])
 addpath([Path 'FRIQA\LTG'])
 addpath([Path 'FRIQA\VSI'])
 
-for i = 1:30
+for i = 1:300
     img_name{i,1} = [num2str(i,'%06.f'),'.png'];
 end
 
